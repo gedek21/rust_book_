@@ -62,4 +62,45 @@ pub fn _basic_ownersip_2() {
 
 // refrenceses
 
+// borrowed with out a refrenceses
+fn _calculate_length(s: String) -> (String, usize) {
+    let length: usize = s.len();
+    return (s, length);
+}
+
+pub fn _basic_references() {
+    let s1 = String::from("hello"); // 5kb of memory
+    let (s2, len) = _calculate_length(s1); // not taking memory because borrowing a value from s1
+    println!("{s2} {len}"); // when its done it will automatically clean it self
+}
+
+// refactor a code
+fn _calculate_length_refactor(s: &String) -> usize {
+    return s.len();
+}
+
+pub fn _refrenceses_refactor() {
+    let s1 = String::from("hello");
+    let len = _calculate_length_refactor(&s1);
+
+    println!("{} {}", s1, len);
+}
+
+pub fn _owner_and_refrence() {
+    let x = 5;
+    let y = &x;
+
+    println!("x(original owner value) : {}\ny(reference of value x and derefence of this value): {} ", x, *y)
+}
+
+pub fn _mutable_refrences() {
+    let mut a_string = String::from("Hello, ");
+    _change(&mut a_string);
+
+    println!("{}", a_string);
+}
+
+fn _change(some_string: &mut String) {
+    some_string.push_str("World!!");
+}
 

@@ -62,6 +62,6 @@ fn _loop_fobinacci() {
 }
 
 fn main() {
-    basic_ownership::_basic_ownersip_2();
+    basic_ownership::_mutable_refrences();
 }
 
