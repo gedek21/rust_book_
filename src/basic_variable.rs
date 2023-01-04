@@ -1,6 +1,7 @@
 use std::io;
 use std::str::FromStr;
 use std::env;
+use std::collections::VecDeque;
 
 #[allow(dead_code)]
 pub fn magic_numbers() {
@@ -87,7 +88,12 @@ pub fn excercises_basic_variable() {
     let _tup_two = _tup.1;
     let _tup_three = _tup.2;
 
-    print!("Integer: {_x}\nFloat: {_f}\nString: {_s}\nChar: {_c}\nTuple: {_tup_one}, {_tup_two}, {_tup_three}\nArray: {:?}", _array);
+    let mut _numbers = Vec::from([1, 2, 3, 4, 5]);
+    _numbers.push(1);
+    _numbers.push(9);
+    _numbers.push(9);
+
+    print!("Integer: {_x}\nFloat: {_f}\nString: {_s}\nChar: {_c}\nTuple: {_tup_one}, {_tup_two}, {_tup_three}\nArray: {:?}\nArray Vector:{:?}", _array, _numbers);
 }
 
 // Excercises basic input output
@@ -134,6 +140,14 @@ fn test_gcd() {
     assert_eq!(gcd(14, 15), 1);
     assert_ne!(gcd(2 * 3 * 5 * 11 * 17,
                     3 * 7 * 11 * 13 * 19), 3 * 11);
+}
+
+pub fn _some_basic_vec() {
+    let mut _numbers = VecDeque::from([1, 2, 3, 4]);
+    _numbers.insert(2, 6);
+    _numbers.retain(|num| if *num % 2 == 0 { return true; } else { return false; });
+
+    println!("{:?}", _numbers);
 }
 
 

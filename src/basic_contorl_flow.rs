@@ -213,10 +213,10 @@ pub fn _info_celsius_fahrenheit() {
 }
 
 pub fn _the_twelve_days_of_christmas() -> String {
-    let days = [
+    let days = Vec::from([
         "first", "second", "third", "fourth", "fifth", "sixth",
         "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth",
-        ];
+        ]);
     let gifts = [
         "A partridge in a pear tree",
         "Two turtle doves",
