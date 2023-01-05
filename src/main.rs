@@ -3,6 +3,7 @@ mod basic_ownership;
 pub mod basic_function;
 pub mod basic_contorl_flow;
 mod borrow_ownership_refrenceses;
+pub mod basic_struct;
 
 use std::io;
 use std::cmp::Ordering;
@@ -63,8 +64,6 @@ fn _loop_fobinacci() {
 }
 
 fn main() {
-    basic_ownership::_let_me_borrow();
-    basic_ownership::_calculated_length_string();
-    basic_ownership::_all_basic_borrow_and_refrences()
+    basic_struct::_basic_struct();
 }
 

@@ -45,3 +45,4 @@ pub fn _all_basic_borrow_and_refrences() {
 
     println!("{} {}", some_word, first_word_of_string);
 }
+
