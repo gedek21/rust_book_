@@ -5,6 +5,7 @@ pub mod basic_contorl_flow;
 mod borrow_ownership_refrenceses;
 pub mod basic_struct;
 pub mod exam_part_01;
+pub mod review_week_01;
 
 use std::io;
 use std::cmp::Ordering;
@@ -65,6 +66,6 @@ fn _loop_fobinacci() {
 }
 
 fn main() {
-    exam_part_01::_print_info();
+    review_week_01::CalculatorApp();
 }
 
