@@ -6,9 +6,9 @@ pub fn _read_basic() -> io::Result<()> {
     let _read_basic = fs::read_to_string("./some_poems.txt").expect("cant read files or cant find files");
 
     const FILE_PATH: &str = "./japanese_news.txt";
-
-    let _error_handle_read_file = match fs::File::open(FILE_PATH) {
-        Ok(_news) => _news,
+    
+    let _read_some_news = match fs::read_to_string(FILE_PATH) {
+        Ok(_news_read) => println!("{}", _news_read),
         Err(error) => {
             match error.kind() {
                 std::io::ErrorKind::NotFound => {
@@ -20,11 +20,6 @@ pub fn _read_basic() -> io::Result<()> {
             }
         }
     };
-
-    
-    let _read_some_news = fs::read_to_string(FILE_PATH).expect("cant read files");
-
-    println!("{}", _read_some_news);
 
     Ok(())
 }
