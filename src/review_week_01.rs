@@ -20,20 +20,6 @@ impl Calculator {
     }
 }
 
-fn input_string(message: &str) -> io::Result<String> {
-    let mut input = String::new();
-    loop {
-        println!("{}", message);
-        io::stdin().read_line(&mut input).expect("Cant read line");
-        input = input.trim().to_string();
-        if !input.is_empty() {
-            break;
-        }
-        println!("Enter an string again!");
-    }
-    Ok(input)
-}
-
 fn input_integer(message: &str) -> u32 {
     loop {
         println!("{}", message);
@@ -49,18 +35,21 @@ fn input_integer(message: &str) -> u32 {
 
 pub fn CalculatorApp() {
     loop {
-        let menu = input_integer("Enter menu");
+        println!("Enter the operator");
+        let mut menu = String::new();
+        io::stdin().read_line(&mut menu).expect("Can read line");
+        let convert_as_string: &str = menu.as_str().trim();
 
         let nums = Calculator {
             x: input_integer("Enter x number"),
             y: input_integer("Enter y number")
         };
 
-        match menu {
-            1 => return println!("{} + {} = {}", nums.x, nums.y, nums.Add()),
-            2 => return println!("{} - {} = {}", nums.x, nums.y, nums.Subtraction()),
-            3 => return println!("{} * {} = {}", nums.x, nums.y, nums.Miltiplication()),
-            4 => return println!("{} / {} = {}", nums.x, nums.y, nums.Divide()),
+        match convert_as_string {
+            "add" => return println!("{} + {} = {}", nums.x, nums.y, nums.Add()),
+            "sub" => return println!("{} - {} = {}", nums.x, nums.y, nums.Subtraction()),
+            "multi" => return println!("{} * {} = {}", nums.x, nums.y, nums.Miltiplication()),
+            "div" => return println!("{} / {} = {}", nums.x, nums.y, nums.Divide()),
             _ => continue,
         }
     }

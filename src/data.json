@@ -1,0 +1,20 @@
+[
+    {
+        "name": "admin",
+        "username": "admin_real",
+        "email": "admin@gmail.com",
+        "password": "hashsed"
+    }, 
+    {
+        "name": "elgato",
+        "username": "elgato dios mios",
+        "email": "elgato@gmail.com",
+        "password": "1hashsed"
+    },
+    {
+        "name": "amemesed",
+        "username": "realDonaldTrump",
+        "email": "real@trump.com",
+        "password": "1hashsed2"
+    }
+]

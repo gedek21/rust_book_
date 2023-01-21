@@ -8,6 +8,9 @@ edition = "2021"
 [dependencies]
 rand = "0.8.5"
 bcrypt = "0.13"
+serde = "1.0.117"
+serde_derive = "1.0.117"
+serde_json = "1.0.59"
 
 [dependencies.uuid]
 version = "1.2.2"

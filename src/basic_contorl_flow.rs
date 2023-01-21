@@ -53,7 +53,7 @@ pub fn _knight_and_sword() {
 
     let _knight_name: &str = _input_line.trim();
 
-    let _knight_stats = KnightStats {
+    let _knight_stats: KnightStats = KnightStats {
         strength: 10,
         intellegent: 4,
         vitality: 8,
@@ -63,7 +63,7 @@ pub fn _knight_and_sword() {
         luck: 5,
     };
 
-    let _goblin_stats = MonsterStats {
+    let _goblin_stats:MonsterStats = MonsterStats {
         strength: 4,
         intellegent: 1,
         vitality: 2,
